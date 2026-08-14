@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import Script from "next/script";
+import { DM_Sans, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -15,26 +17,62 @@ const geistMono = Geist_Mono({
 const playfair = Playfair_Display({
   variable: "--font-editorial",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Samuel Ohiani | Full-Stack Engineer",
+  metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
+  title: "Samuel Ohiani — Full-stack Software Engineer",
   description:
-    "A view of my work, projects, and experience as a full-stack engineer.",
-    icons:{
-      icon: "/images/favicon.png",
-    }
+    "Full-stack software engineer building reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+  keywords: [
+    "Samuel Ohiani",
+    "Backend Engineer",
+    "Full-stack Engineer",
+    "Node.js Developer",
+    "Fintech Engineer",
+    "TypeScript",
+    "Payment Infrastructure",
+  ],
+  authors: [{ name: "Samuel Ohiani" }],
+  openGraph: {
+    title: "Samuel Ohiani — Full-stack Software Engineer",
+    description:
+      "Reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Samuel Ohiani — Full-stack Software Engineer",
+    description:
+      "Reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+  },
 };
+
+const themeScript = `
+  try {
+    var storedTheme = localStorage.getItem("samuel-theme");
+    document.documentElement.dataset.theme = storedTheme === "dark" ? "dark" : "light";
+  } catch (error) {
+    document.documentElement.dataset.theme = "light";
+  }
+`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scrollbar-none ${playfair.variable} h-full antialiased`}
+      data-theme="light"
+      suppressHydrationWarning
+      className={`${dmSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body>
+        <Script id="theme-script" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
