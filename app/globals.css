@@ -778,6 +778,8 @@ html.theme-changing *::after {
   overflow: hidden;
   border-top: 1px solid var(--line-strong);
   background: var(--background);
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
 }
 .footer-invite { gap: 2rem; }
 .footer-invite > span { max-width: 18rem; font-family: var(--font-display), Georgia, serif; font-size: 1.15rem; font-style: italic; }

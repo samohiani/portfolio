@@ -12,10 +12,23 @@ export default function FooterStretch() {
     let tension = 0;
     let releaseTimer: number | undefined;
     let lastTouchY: number | undefined;
+    let frame: number | undefined;
+
+    const footer = wordmark.closest<HTMLElement>(".portfolio-footer");
+    if (!footer) return;
+
+    const render = () => {
+      frame = undefined;
+      wordmark.style.transform = `scaleY(${1 + tension / 420})`;
+    };
+
+    const requestRender = () => {
+      if (frame === undefined) frame = window.requestAnimationFrame(render);
+    };
 
     const release = () => {
       tension = 0;
-      wordmark.style.transform = "scaleY(1)";
+      requestRender();
     };
 
     const handleWheel = (event: WheelEvent) => {
@@ -28,7 +41,7 @@ export default function FooterStretch() {
 
       tension = Math.min(150, tension + Math.abs(event.deltaY) * 0.45);
       wordmark.style.transition = "none";
-      wordmark.style.transform = `scaleY(${1 + tension / 420})`;
+      requestRender();
 
       window.clearTimeout(releaseTimer);
       releaseTimer = window.setTimeout(() => {
@@ -51,7 +64,7 @@ export default function FooterStretch() {
       if (downwardPull > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
         tension = Math.min(150, tension + downwardPull * 0.65);
         wordmark.style.transition = "none";
-        wordmark.style.transform = `scaleY(${1 + tension / 420})`;
+        requestRender();
       }
     };
 
@@ -61,16 +74,19 @@ export default function FooterStretch() {
       release();
     };
 
-    window.addEventListener("wheel", handleWheel, { passive: true });
-    window.addEventListener("touchstart", handleTouchStart, { passive: true });
-    window.addEventListener("touchmove", handleTouchMove, { passive: true });
-    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+    footer.addEventListener("wheel", handleWheel, { passive: true });
+    footer.addEventListener("touchstart", handleTouchStart, { passive: true });
+    footer.addEventListener("touchmove", handleTouchMove, { passive: true });
+    footer.addEventListener("touchend", handleTouchEnd, { passive: true });
+    footer.addEventListener("touchcancel", handleTouchEnd, { passive: true });
     return () => {
-      window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
+      footer.removeEventListener("wheel", handleWheel);
+      footer.removeEventListener("touchstart", handleTouchStart);
+      footer.removeEventListener("touchmove", handleTouchMove);
+      footer.removeEventListener("touchend", handleTouchEnd);
+      footer.removeEventListener("touchcancel", handleTouchEnd);
       window.clearTimeout(releaseTimer);
+      if (frame !== undefined) window.cancelAnimationFrame(frame);
     };
   }, []);
 
