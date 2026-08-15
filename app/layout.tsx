@@ -23,13 +23,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
-  title: "Samuel Ohiani — Full-stack Software Engineer",
+  title: "Samuel Ohiani | Full stack Software Engineer",
   description:
-    "Full-stack software engineer building reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+    "Full stack software engineer building reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
   keywords: [
     "Samuel Ohiani",
     "Backend Engineer",
-    "Full-stack Engineer",
+    "Full stack Engineer",
     "Node.js Developer",
     "Fintech Engineer",
     "TypeScript",
@@ -37,16 +37,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Samuel Ohiani" }],
   openGraph: {
-    title: "Samuel Ohiani — Full-stack Software Engineer",
+    title: "Samuel Ohiani | Full stack Software Engineer",
     description:
-      "Reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+      "Reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Samuel Ohiani — Full-stack Software Engineer",
+    title: "Samuel Ohiani | Full stack Software Engineer",
     description:
-      "Reliable fintech systems, product interfaces, payment infrastructure, and API-first platforms.",
+      "Reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
   },
 };
 

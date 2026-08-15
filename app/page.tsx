@@ -15,7 +15,7 @@ const experience = [
     detail: "Payment infrastructure",
     role: "Software Engineer",
     engagement: "Contract",
-    period: "Dec 2025 — Present",
+    period: "Dec 2025 to Present",
     href: "https://www.resilience17.com/",
     logo: "/images/work/resilience.jpeg",
     logoAlt: "Resilience 17 logo",
@@ -27,15 +27,15 @@ const experience = [
   },
   {
     company: "Rivo",
-    detail: "Multi-currency finance",
+    detail: "Multi currency finance",
     role: "Software Engineer",
-    engagement: "Full-time",
-    period: "May 2025 — Present",
+    engagement: "Full time",
+    period: "May 2025 to Present",
     href: "https://www.userivo.co/",
     logo: "/images/work/rivo.jpeg",
     logoAlt: "Rivo logo",
     summary:
-      "Developing multi-currency financial products spanning accounts, swaps, transfers, KYB, partner integrations, webhooks, and internal operations.",
+      "Developing multi currency financial products spanning accounts, swaps, transfers, KYB, partner integrations, webhooks, and internal operations.",
     contribution:
       "I joined at junior level and grew into broader product and systems ownership, contributing across backend services, integration reliability, and product delivery.",
     stack: ["Node.js", "TypeScript", "Express", "MongoDB", "Redis", "AWS"],
@@ -43,14 +43,14 @@ const experience = [
   {
     company: "Precise Financial Systems",
     detail: ".NET foundations",
-    role: "Backend Intern",
+    role: "Backend Developer",
     engagement: "Internship",
-    period: "Mar 2024 — Aug 2024",
+    period: "Mar 2024 to Aug 2024",
     href: "https://www.thepfs.biz/newsite/",
     logo: "/images/work/PFS.jpeg",
     logoAlt: "Precise Financial Systems logo",
     summary:
-      "Worked closely with a lead engineer while learning the foundations of .NET development in a financial-software environment.",
+      "Worked closely with a lead engineer while learning the foundations of .NET development in a financial software environment.",
     contribution:
       "Built an early foundation in backend engineering through guided system reviews, debugging, and feedback on existing software, with a growing appreciation for the care financial systems require.",
     stack: [".NET", "C#", "JavaScript", "Node.js", "PostgreSQL"],
@@ -60,14 +60,14 @@ const experience = [
     detail: "Payment processing",
     role: "Backend Developer",
     engagement: "Internship",
-    period: "Mar 2024 — Sep 2024",
+    period: "Mar 2024 to Sep 2024",
     href: "https://up-ng.com/",
     logo: "/images/work/unified-payments.png",
     logoAlt: "Unified Payments logo",
     summary:
-      "Resolved backend bugs in JavaScript and Node.js services, improving system stability and performance throughout the internship.",
+      "Resolved backend issues in JavaScript and Node.js services, helping improve system stability and performance throughout the internship.",
     contribution:
-      "Reviewed existing systems with my lead, shared technical feedback, and implemented fixes that helped reduce reported backend issues.",
+      "Reviewed existing systems with my lead, shared technical feedback, and shipped fixes that helped reduce recurring backend issues.",
     stack: ["JavaScript", "Node.js", "REST APIs", "Debugging"],
   },
 ];
@@ -93,7 +93,7 @@ const projects: Array<{
   {
     name: "Buga Travels",
     description:
-      "A school-focused ride-sharing platform that helps students book individual or shared rides when schools resume or close for breaks. It brings riders and drivers together around those peak travel periods, making the journey home or back to school easier to coordinate.",
+      "A school focused ride sharing platform that helps students book individual or shared rides when schools resume or close for breaks. It brings riders and drivers together around those peak travel periods, making the journey home or back to school easier to coordinate.",
     stack: "Node.js · Express · Sequelize · PostgreSQL",
     category: "Platform project",
     image: "/images/work/buga.jpeg",
@@ -130,7 +130,7 @@ export default function Home() {
             <a className="identity-mark" href="#top" aria-label="Back to top">
               <span className="identity-photo">
                 <Image
-                  src="/images/samuel.JPG"
+                  src="/images/samuel-optimized.jpg"
                   alt=""
                   fill
                   priority
@@ -141,8 +141,8 @@ export default function Home() {
             </a>
             <div className="identity-copy">
               <h1>Samuel Ohiani</h1>
-              <span>Full-stack Engineer</span>
-              <p className="identity-roleline">Backend-leaning</p>
+              <span>Full stack Engineer</span>
+              <p className="identity-roleline">Backend leaning</p>
             </div>
           </div>
           <div className="hero-controls">
@@ -182,7 +182,7 @@ export default function Home() {
             <dl>
               <div><dt>Current focus</dt><dd>Fintech systems</dd></div>
               <div><dt>Strongest in</dt><dd>Backend architecture</dd></div>
-              <div><dt>Also building</dt><dd>Full-stack products</dd></div>
+              <div><dt>Also building</dt><dd>Full stack products</dd></div>
             </dl>
           </aside>
         </div>
@@ -210,7 +210,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="section-index">02 / EXPERIENCE</span>
-            <h2>Work that moved money—and me—forward.</h2>
+            <h2>Building reliable systems across fintech.</h2>
           </div>
           <p>Two current roles, plus two formative backend internships.</p>
         </div>
@@ -272,7 +272,7 @@ export default function Home() {
               <strong>01</strong>
             </div>
             <p>
-              A privacy-first lead qualification tool that turns inconsistent
+              A privacy first lead qualification tool that turns inconsistent
               CSV exports into an explainable, ranked sales pipeline. Every
               recommendation shows its reasoning, and uploaded files are
               processed in memory rather than stored.
@@ -302,7 +302,7 @@ export default function Home() {
           <div className="qualiflow-facts">
             <span>No database</span>
             <span>Up to 10,000 leads</span>
-            <span>100-point scoring model</span>
+            <span>100 point scoring model</span>
             <span>Next.js · TypeScript · Node.js</span>
           </div>
         </article>
@@ -338,7 +338,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="section-index">04 / TOOLKIT</span>
-            <h2>Comfortable across the stack.</h2>
+          <h2>Comfortable across the stack.</h2>
           </div>
           <p>Verified across my résumé and current local work.</p>
         </div>
