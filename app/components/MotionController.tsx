@@ -11,8 +11,9 @@ export default function MotionController() {
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
+    const isSmallScreen = window.matchMedia("(max-width: 680px)").matches;
 
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    if (prefersReducedMotion || isSmallScreen || !("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("is-visible"));
       return;
     }

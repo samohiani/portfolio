@@ -1,49 +1,38 @@
-Samuel Ohiani | Personal Portfolio
+# Samuel Ohiani Portfolio
 
-A minimal, editorial style portfolio I built for my friend Samuel Ohiani, a backend focused software engineer.
+Personal portfolio for Samuel Ohiani, a full stack software engineer focused on reliable backend systems, fintech products, APIs, and clear product interfaces.
 
-The portfolio showcases his experience, projects, technical work, and contact information through a dark, interactive interface.
+## Built with
 
-Tech Stack
-Next.js
-TypeScript
-Tailwind CSS
-Framer Motion
-React
-Highlights
-Dark, minimal, editorial inspired design
-Animated hero section with typewriter text
-Interactive profile image zoom
-Expandable work experience
-Custom experience cursor interaction
-Project and volunteer experience showcase
-Cursor following spotlight effect on project cards
-Smooth scroll-based animations
-Responsive design across desktop and mobile
-Animated contact/footer section
-Back to top interaction
-Design
+- Next.js
+- TypeScript
+- React
+- CSS
 
-The portfolio uses a dark visual system built around:
+## Includes
 
-#050505 background
-Editorial typography
-High contrast text
-Subtle borders
-Generous whitespace
-Restrained animations and micro interactions
+- Responsive light and dark themes
+- Selected work and experience
+- Project links and technology details
+- Optimized portrait and company logos
+- Small, accessible motion effects with reduced motion support
 
-The goal was to create something professional, personal, and intentional rather than another generic developer portfolio.
+## Run locally
 
-Getting Started
+```bash
 npm install
 npm run dev
+```
 
-Open http://localhost:3000 in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Production
+## Build for production
+
+```bash
 npm run build
 npm start
-Author
+```
 
-Built by Tomi for Samuel Ohiani.
+## Owner
+
+Samuel Ohiani
