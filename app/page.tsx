@@ -1,5 +1,4 @@
 import Image from "next/image";
-import FooterStretch from "./components/FooterStretch";
 import MotionController from "./components/MotionController";
 import ThemeToggle from "./components/ThemeToggle";
 
@@ -370,7 +369,6 @@ export default function Home() {
         <div className="sammy-wordmark" aria-hidden="true">
           <span>Sammy</span>
         </div>
-        <FooterStretch />
       </footer>
     </main>
   );

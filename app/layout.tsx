@@ -52,9 +52,13 @@ export const metadata: Metadata = {
 
 const themeScript = `
   try {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+    window.addEventListener("load", function () { window.scrollTo(0, 0); }, { once: true });
     var storedTheme = localStorage.getItem("samuel-theme");
     document.documentElement.dataset.theme = storedTheme === "dark" ? "dark" : "light";
   } catch (error) {
+    window.scrollTo(0, 0);
     document.documentElement.dataset.theme = "light";
   }
 `;
