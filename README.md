@@ -1,6 +1,6 @@
 # Samuel Ohiani Portfolio
 
-Personal portfolio for Samuel Ohiani, a full stack software engineer focused on reliable backend systems, fintech products, APIs, and clear product interfaces.
+Personal portfolio for Samuel Ohiani, a software engineer focused on backend systems, payment infrastructure, and full-stack products.
 
 ## Built with
 
@@ -11,11 +11,15 @@ Personal portfolio for Samuel Ohiani, a full stack software engineer focused on 
 
 ## Includes
 
-- Responsive light and dark themes
-- Selected work and experience
-- Project links and technology details
-- Optimized portrait and company logos
-- Small, accessible motion effects with reduced motion support
+- Responsive editorial layout with four selectable projects
+- Full, uncropped project previews and repository-backed work descriptions
+- Complete experience and earlier-project archive
+- Portrait-free design and a brief cinematic introduction
+- A black and red default theme with a saved light-theme preference
+- A staged hero reveal, reading-progress line, section traces, and project image transitions
+- Automatic project previews that pause while reading and stop after manual selection
+- Reduced-motion support; the introduction plays once per browser session
+- Replay the introduction locally at `http://localhost:3000/?intro=1`
 
 ## Run locally
 
