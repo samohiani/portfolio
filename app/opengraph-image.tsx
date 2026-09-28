@@ -41,12 +41,12 @@ export default function OpenGraphImage() {
             letterSpacing: -6,
           }}
         >
-          <span>Software behind</span>
-          <span>payments.</span>
+          <span>I build software</span>
+          <span>for complex ideas.</span>
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 25, color: "#b8babd" }}>
-        <span>Selected work in payments and full-stack software</span>
+        <span>Full-stack products · backend systems · automations</span>
         <span>Lagos, Nigeria</span>
       </div>
     </div>,

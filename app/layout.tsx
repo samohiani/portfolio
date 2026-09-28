@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
   title: "Samuel Ohiani — Software Engineer",
   description:
-    "Samuel Ohiani is a software engineer in Lagos building full-stack products and the backend systems behind payments, wallets and business workflows.",
+    "Samuel Ohiani is a software engineer in Lagos building full-stack products, backend systems, and practical automations.",
   keywords: [
     "Samuel Ohiani",
     "Backend Engineer",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Samuel Ohiani — Software Engineer",
     description:
-      "Selected work in payment systems and full-stack products.",
+      "Selected work across full-stack products, backend systems, and payment infrastructure.",
     type: "website",
   },
 };

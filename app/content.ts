@@ -1,8 +1,6 @@
 export const content = {
   name: "Samuel Ohiani",
   role: "Software engineer",
-  location: "Lagos, Nigeria",
-  availability: "Open to backend and full-stack roles",
   navigation: [
     { label: "Work", href: "#work" },
     { label: "Experience", href: "#experience" },
@@ -10,9 +8,9 @@ export const content = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    headline: ["I build the software", "behind payments."],
+    headline: ["I build software", "for complex ideas."],
     description:
-      "I’m Samuel Ohiani, a software engineer in Lagos. I build acquiring APIs at Resilience 17 and full-stack tools for real workflows.",
+      "I’m Samuel Ohiani, a software engineer in Lagos. I build full-stack products, backend systems, and practical automations—from the interfaces people use to the systems they depend on.",
     workLink: "View selected work",
     contactLink: "Email me",
   },
@@ -172,6 +170,7 @@ export const content = {
   contact: {
     prompt: "Have a role or product in mind?",
     headline: "Let’s talk about what you’re building.",
+    action: "Start a conversation",
     email: "ohianisammy2005@gmail.com",
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-ohiani/" },

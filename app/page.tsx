@@ -37,10 +37,9 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-topline"><span>{content.availability}</span><span>{content.location}</span></div>
         <div className="hero-grid">
           <div className="hero-main">
-            <h1 id="hero-title"><span>{content.hero.headline[0]}</span><span>{content.hero.headline[1]}</span></h1>
+            <h1 id="hero-title"><span>{content.hero.headline[0]}</span>{" "}<span>{content.hero.headline[1]}</span></h1>
             <div className="hero-intro">
               <p>{content.hero.description}</p>
               <div className="hero-actions">
@@ -97,7 +96,7 @@ export default function Home() {
       <section className="contact" id="contact" aria-labelledby="contact-title">
         <p>{content.contact.prompt}</p>
         <h2 id="contact-title">{content.contact.headline}</h2>
-        <a className="contact-mail" href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
+        <a className="contact-mail" href={`mailto:${content.contact.email}`} aria-label="Start a conversation by email">{content.contact.action}</a>
         <div className="contact-links">{content.contact.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div>
       </section>
 
