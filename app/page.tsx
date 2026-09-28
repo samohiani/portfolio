@@ -10,6 +10,7 @@ function IntroLoader() {
       <div className="intro-loader__panel intro-loader__panel--right" />
       <span className="intro-loader__haze" />
       <span className="intro-loader__horizon" />
+      <span className="intro-loader__rift" />
       <div className="intro-loader__identity">
         <span className="intro-loader__rule" />
         <span className="intro-loader__title" data-text="SAMUEL">SAMUEL</span>
@@ -37,6 +38,11 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-portal" aria-hidden="true">
+          <span className="hero-portal__halo" />
+          <span className="hero-portal__rift" />
+          <span className="hero-portal__embers" />
+        </div>
         <div className="hero-grid">
           <div className="hero-main">
             <h1 id="hero-title"><span>{content.hero.headline[0]}</span>{" "}<span>{content.hero.headline[1]}</span></h1>

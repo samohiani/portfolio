@@ -50,7 +50,7 @@ const introScript = `
     document.documentElement.dataset.theme = "dark";
   }
   try {
-    var key = "samuel-portfolio-intro-v4";
+    var key = "samuel-portfolio-intro-v5";
     var seen = sessionStorage.getItem(key);
     var replay = new URLSearchParams(location.search).get("intro") === "1";
     document.documentElement.dataset.intro = seen && !replay ? "skip" : "play";
