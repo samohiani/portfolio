@@ -12,8 +12,8 @@ Compiled on 27 September 2026 from Samuel's answers, the current portfolio, the 
 ## Available assets and contact
 
 - Portrait: a file exists in the original assets, but **Samuel later asked to remove his image from the portfolio**. The rebuilt page does not use it.
-- Résumé: [`public/resume/Samuel-Ohiani-CV.pdf`](../public/resume/Samuel-Ohiani-CV.pdf). It was created in April 2026 and needs a date/content check before launch.
-- Existing contact route: `ohianisammy2005@gmail.com`, [LinkedIn](https://www.linkedin.com/in/samuel-ohiani/), [GitHub](https://github.com/samohiani), and résumé download. **Samuel confirmed these should stay.**
+- Résumé: the April 2026 copy was removed from the public site because it lists the Rivo role as ending before Samuel's confirmed August 2026 date. A corrected résumé can be added later.
+- Existing contact route: `ohianisammy2005@gmail.com`, [LinkedIn](https://www.linkedin.com/in/samuel-ohiani/), and [GitHub](https://github.com/samohiani). Samuel confirmed these links should stay.
 
 ## Candidate project stories
 
@@ -46,7 +46,7 @@ Compiled on 27 September 2026 from Samuel's answers, the current portfolio, the 
 1. **Four featured case studies selected:** Nuvion, Rivo / Rivo Business, Qualiflow, and Iraid. This order puts backend depth first for the roles Samuel wants. The latter two show full-stack and frontend range.
 2. Give each chosen project a short **problem → contribution → decision → result** story. Use numbers only if you can stand behind them; a qualitative result is fine.
 3. Retain all experience, including **Resilience 17 (current), Rivo (ended August 2026), Precise Financial Systems and Unified Payment Services (past internships)**. Keep HebronBites and Buga Travels as a compact earlier-project archive, even though they are not among the four featured stories.
-4. Update the résumé before launch: it currently ends the Low Gravity role in April 2026, while Samuel has confirmed August 2026.
+4. Before offering a résumé download, update the old April 2026 copy with the confirmed Rivo end date of August 2026.
 
 ## Answer format
 
@@ -58,5 +58,5 @@ Compiled on 27 September 2026 from Samuel's answers, the current portfolio, the 
 
 - The featured stories now describe Nuvion's payment-intent actions, provider error parsing and sandbox scenarios, and Rivo's business permissions, payment-link settlement and webhook delivery states. These details were cross-checked against Samuel-authored commits on Nuvion `main` and Rivo `origin/production`.
 - Qualiflow and Iraid describe working features and contribution, without invented adoption or revenue metrics. The past internships remain concise because the available sources do not identify a specific shipped feature for either role.
-- The portfolio does not currently link the résumé, but the PDF under `public/resume/` still says Low Gravity ended in April 2026. Samuel confirmed August 2026; refresh or remove that stale public file before launch.
+- The outdated résumé PDF was removed from `public/resume/` before launch. The portfolio does not currently offer a résumé download.
 - The visible contact action hides the birth year in the email address, but its `mailto:` target still contains it. Replace the address if Samuel wants the year absent from the link itself.
