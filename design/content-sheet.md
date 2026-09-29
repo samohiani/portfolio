@@ -53,3 +53,10 @@ Compiled on 27 September 2026 from Samuel's answers, the current portfolio, the 
 - **For copy review:** Correct any overstated contribution in the Rivo/Nuvion drafts above. The current evidence supports the categories, but it cannot by itself show Samuel's exact ownership or approved public wording.
 - **For case studies:** Give one engineering decision or tradeoff for each of Rivo and Nuvion, if there is one you can describe publicly.
 - **For Iraid/Qualiflow:** Correct any overstated role or outcome in their existing descriptions.
+
+## 29 September content pass
+
+- The featured stories now describe Nuvion's payment-intent actions, provider error parsing and sandbox scenarios, and Rivo's business permissions, payment-link settlement and webhook delivery states. These details were cross-checked against Samuel-authored commits on Nuvion `main` and Rivo `origin/production`.
+- Qualiflow and Iraid describe working features and contribution, without invented adoption or revenue metrics. The past internships remain concise because the available sources do not identify a specific shipped feature for either role.
+- The portfolio does not currently link the résumé, but the PDF under `public/resume/` still says Low Gravity ended in April 2026. Samuel confirmed August 2026; refresh or remove that stale public file before launch.
+- The visible contact action hides the birth year in the email address, but its `mailto:` target still contains it. Replace the address if Samuel wants the year absent from the link itself.

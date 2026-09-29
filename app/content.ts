@@ -39,13 +39,13 @@ export const content = {
       id: "nuvion",
       name: "Nuvion",
       category: "Payment infrastructure at Resilience 17",
-      headline: "A clearer contract for complex payment flows.",
+      headline: "Making complex payment states legible.",
       summary:
-        "At Resilience 17, I work on Nuvion’s acquiring API across card and alternative payment methods, 3DS, refunds and sandbox testing.",
+        "At Resilience 17, I build parts of Nuvion’s acquiring API for card and alternative payment methods, including 3DS authentication, refunds and sandbox payment paths.",
       decision:
-        "I standardised provider failure parsing into shared API errors and helped align validation across acquiring and core services.",
+        "I separated provider-specific failure parsing from the shared API error contract, aligned validation with core services, and built test tokens and scenarios for repeatable sandbox flows.",
       result:
-        "Payment intents now expose their next action more clearly, while test tokens and scenarios make payment paths easier to exercise.",
+        "Payment-intent responses now include the latest required action. API callers get clearer failure reasons, and payment paths can be exercised in the sandbox.",
       image: "/images/work/nuvion-product-preview.png",
       imageWidth: 1552,
       imageHeight: 792,
@@ -56,11 +56,11 @@ export const content = {
       id: "rivo",
       name: "Rivo",
       category: "Multi-currency finance at Low Gravity",
-      headline: "Reliability behind business payments.",
+      headline: "Keeping business transactions in sync.",
       summary:
-        "I worked across Rivo and Rivo Business APIs for business onboarding and KYB, wallets, payment links, transfers, webhooks and refunds.",
+        "At Low Gravity, I worked across Rivo and Rivo Business APIs for business onboarding and KYB, wallets, transfers, payment links, team permissions and refunds.",
       decision:
-        "I handled duplicate deposit notifications, payment-link completion and webhook delivery states to make transaction updates more dependable.",
+        "I fixed payment-link settlement edge cases, centralized business webhook delivery status, and handled duplicate deposit notifications to keep transaction state consistent.",
       result:
         "Reported backend-related issues fell by 40% during my time on the team.",
       image: "/images/work/rivo-product-preview.png",
@@ -75,13 +75,13 @@ export const content = {
       id: "qualiflow",
       name: "Qualiflow",
       category: "Independent full-stack project",
-      headline: "Turning a messy lead export into a useful next step.",
+      headline: "From raw CSV to explainable lead ranking.",
       summary:
-        "Qualiflow cleans CSVs, ranks prospects against adjustable criteria and shows why each lead received its score.",
+        "I built a lead qualification workspace that cleans CSV imports, scores prospects against adjustable criteria and explains each ranking before export.",
       decision:
-        "Uploaded files are processed in memory, and exported cells are escaped to prevent spreadsheet formulas from running.",
+        "Imports are processed in memory instead of storing prospect files, and exported cells are escaped to prevent spreadsheet formulas from running when the CSV is opened.",
       result:
-        "The live app lets users inspect, adjust and export ranked leads with an explanation for each score.",
+        "The live app takes users from a raw file to a reviewable, adjustable ranked list they can export.",
       image: "/images/work/qualiflow-desktop.webp",
       imageWidth: 1440,
       imageHeight: 1000,
@@ -99,11 +99,11 @@ export const content = {
       id: "iraid",
       name: "Iraid",
       category: "Frontend and content workflow",
-      headline: "A site the team can update themselves.",
+      headline: "A gallery the team can update without code.",
       summary:
-        "I built the frontend and Sanity-backed gallery for an organisation website focused on community programmes.",
+        "I built the frontend for Iraid’s community programmes website and connected its gallery to Sanity so media and captions can be edited outside the codebase.",
       decision:
-        "Separating the site presentation from content editing lets the team add gallery media and captions without a developer.",
+        "I separated the public presentation from gallery content editing, giving the team a direct path to publish new images and captions.",
       result:
         "The public site and editable gallery are live.",
       image: "/images/work/iraid-desktop.webp",
@@ -123,7 +123,7 @@ export const content = {
       role: "Software Engineer",
       period: "Dec 2025 — Present",
       detail:
-        "Building Nuvion’s card and alternative payment flows, including 3DS, refunds, provider integrations and test scenarios. Led shared error-contract work across acquiring and core services, improving validation and gateway failure handling.",
+        "Building Nuvion’s acquiring APIs for card and alternative payment methods, from initiation and 3DS through provider responses, refunds and final status updates. I built sandbox test tokens and scenarios, exposed the latest action on payment intents, and helped standardize errors and validation across acquiring and core services.",
       href: "https://www.resilience17.com/",
     },
     {
@@ -131,7 +131,7 @@ export const content = {
       role: "Software Engineer",
       period: "May 2025 — Aug 2026",
       detail:
-        "Built Rivo and Rivo Business APIs for onboarding, KYB, wallets, transfers, payment links, webhooks and refunds. Resolved duplicate transaction and settlement edge cases; reported backend-related issues fell by 40% during the role.",
+        "Built Rivo and Rivo Business APIs for onboarding, KYB, wallets, transfers, payment links and refunds. I also worked on business permissions, recent recipients, payment-link settlement and webhook delivery states. Reported backend-related issues fell by 40% during my tenure.",
       href: "https://www.userivo.co/",
     },
     {
@@ -139,7 +139,7 @@ export const content = {
       role: "Backend Developer Intern",
       period: "Mar 2024 — Aug 2024",
       detail:
-        "Learned .NET development in a financial software environment through guided system reviews and debugging. Used review feedback to improve changes to existing services.",
+        "Worked with .NET services in a financial software environment through guided code reviews and debugging. Applied review feedback to fixes in existing services and learned how established systems are maintained.",
       href: "https://www.thepfs.biz/newsite/",
     },
     {
@@ -147,7 +147,7 @@ export const content = {
       role: "Backend Developer Intern",
       period: "Mar 2024 — Sep 2024",
       detail:
-        "Reviewed existing JavaScript and Node.js backend services with a lead engineer, resolved issues and learned how production APIs were maintained.",
+        "Reviewed JavaScript and Node.js backend services with a lead engineer, investigated issues in existing endpoints and helped apply fixes. The role introduced me to the review and maintenance practices behind production payment APIs.",
       href: "https://up-ng.com/",
     },
   ],
