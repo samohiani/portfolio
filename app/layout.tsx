@@ -1,64 +1,62 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { DM_Sans, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Manrope, Syne } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  weight: ["400", "500", "600", "700"],
+const display = Syne({
+  variable: "--font-display",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = Manrope({
+  variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-editorial",
+const cinema = Cormorant_Garamond({
+  variable: "--font-cinema",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
-  title: "Samuel Ohiani | Full stack Software Engineer",
+  title: "Samuel Ohiani — Software Engineer",
   description:
-    "Full stack software engineer building reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
+    "Samuel Ohiani is a software engineer in Lagos building full-stack products, backend systems, and practical automations.",
   keywords: [
     "Samuel Ohiani",
     "Backend Engineer",
-    "Full stack Engineer",
-    "Node.js Developer",
-    "Fintech Engineer",
-    "TypeScript",
+    "Software Engineer",
+    "Full-stack Engineer",
     "Payment Infrastructure",
   ],
   authors: [{ name: "Samuel Ohiani" }],
   openGraph: {
-    title: "Samuel Ohiani | Full stack Software Engineer",
+    title: "Samuel Ohiani — Software Engineer",
     description:
-      "Reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
+      "Selected work across full-stack products, backend systems, and payment infrastructure.",
     type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Samuel Ohiani | Full stack Software Engineer",
-    description:
-      "Reliable fintech systems, product interfaces, payment infrastructure, and API first platforms.",
   },
 };
 
-const themeScript = `
+const introScript = `
   try {
-    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
-    var storedTheme = localStorage.getItem("samuel-theme");
-    document.documentElement.dataset.theme = storedTheme === "dark" ? "dark" : "light";
+    document.documentElement.dataset.theme = localStorage.getItem("samuel-portfolio-theme") === "light" ? "light" : "dark";
   } catch (error) {
-    window.scrollTo(0, 0);
-    document.documentElement.dataset.theme = "light";
+    document.documentElement.dataset.theme = "dark";
+  }
+  try {
+    var key = "samuel-portfolio-intro-v5";
+    var seen = sessionStorage.getItem(key);
+    var replay = new URLSearchParams(location.search).get("intro") === "1";
+    document.documentElement.dataset.intro = seen && !replay ? "skip" : "play";
+    if (!seen) sessionStorage.setItem(key, "seen");
+  } catch (error) {
+    document.documentElement.dataset.intro = "play";
   }
 `;
 
@@ -66,13 +64,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-theme="light"
+      data-intro="play"
+      data-theme="dark"
       suppressHydrationWarning
-      className={`${dmSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
+      className={`${display.variable} ${body.variable} ${cinema.variable}`}
     >
       <body>
-        <Script id="theme-script" strategy="beforeInteractive">
-          {themeScript}
+        <Script id="intro-session" strategy="beforeInteractive">
+          {introScript}
         </Script>
         {children}
       </body>
