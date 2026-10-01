@@ -16,6 +16,7 @@ export const content = {
   },
   sections: {
     work: "Selected work",
+    stack: "Technical stack",
     experience: "Experience",
     about: "About",
     earlier: "Earlier builds",
@@ -23,9 +24,10 @@ export const content = {
   presentation: {
     currentLabel: "Currently building",
     currentCompany: "Resilience 17",
-    currentStatement: "Acquiring APIs for card payments.",
-    currentDetail: "Payment methods, 3DS, refunds and the cases in between.",
+    currentStatement: "Payment APIs across cards and digital wallets.",
+    currentDetail: "Provider integrations, 3DS, refunds and reliable payment states.",
     workIntro: "What I shipped, across APIs and interfaces.",
+    stackIntro: "The tools I use to build products end to end.",
     chooseProject: "Choose a project",
     previewLabel: "Public product preview",
     contributionLabel: "My contribution",
@@ -41,11 +43,11 @@ export const content = {
       category: "Payment infrastructure at Resilience 17",
       headline: "Making complex payment states legible.",
       summary:
-        "At Resilience 17, I build parts of Nuvion’s acquiring API for card and alternative payment methods, including 3DS authentication, refunds and sandbox payment paths.",
+        "At Resilience 17, I build payment flows for PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay; I also added Google Pay and chargeback paths for Worldpay.",
       decision:
-        "I separated provider-specific failure parsing from the shared API error contract, aligned validation with core services, and built test tokens and scenarios for repeatable sandbox flows.",
+        "My work spans seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I also separated provider-specific error parsing, added repeatable sandbox test scenarios, and exposed the latest required action on payment intents.",
       result:
-        "Payment-intent responses now include the latest required action. API callers get clearer failure reasons, and payment paths can be exercised in the sandbox.",
+        "More payment journeys run through a consistent API: clients can act on the latest payment step, interpret provider failures, and exercise flows in the sandbox.",
       image: "/images/work/nuvion-product-preview.png",
       imageWidth: 1552,
       imageHeight: 792,
@@ -58,11 +60,11 @@ export const content = {
       category: "Multi-currency finance at Low Gravity",
       headline: "Keeping business transactions in sync.",
       summary:
-        "At Low Gravity, I worked across Rivo and Rivo Business APIs for business onboarding and KYB, wallets, transfers, payment links, team permissions and refunds.",
+        "At Low Gravity, I built across Rivo and Rivo Business APIs: fiat and crypto wallets, deposits, swaps and transfers, business onboarding and KYB, payment links, team permissions and refunds.",
       decision:
-        "I fixed payment-link settlement edge cases, centralized business webhook delivery status, and handled duplicate deposit notifications to keep transaction state consistent.",
+        "I fixed payment-link settlement and currency edge cases, made webhook delivery states consistent, and improved transaction and balance handling across user and business flows.",
       result:
-        "Reported backend-related issues fell by 40% during my time on the team.",
+        "The team reported 40% fewer backend-related issues during my time there.",
       image: "/images/work/rivo-product-preview.png",
       imageWidth: 1920,
       imageHeight: 1440,
@@ -117,13 +119,30 @@ export const content = {
       },
     },
   ],
+  stack: [
+    {
+      label: "Interface",
+      context: "Web experiences",
+      tools: ["React", "Next.js", "TypeScript", "CSS"],
+    },
+    {
+      label: "Backend",
+      context: "APIs & integrations",
+      tools: ["Node.js", "Express", "JavaScript", ".NET"],
+    },
+    {
+      label: "Data",
+      context: "Storage & caching",
+      tools: ["MongoDB", "MySQL", "PostgreSQL", "Redis"],
+    },
+  ],
   experience: [
     {
       company: "Resilience 17",
       role: "Software Engineer",
       period: "Dec 2025 — Present",
       detail:
-        "Building Nuvion’s acquiring APIs for card and alternative payment methods, from initiation and 3DS through provider responses, refunds and final status updates. I built sandbox test tokens and scenarios, exposed the latest action on payment intents, and helped standardize errors and validation across acquiring and core services.",
+        "Building payment flows across PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay, and extending Worldpay support for Google Pay and chargebacks. My work covers seller onboarding, payment initiation, 3DS, captures, refunds, signed webhooks and provider-specific errors. I also added sandbox test scenarios and made the latest required payment action available to API clients.",
       href: "https://www.resilience17.com/",
     },
     {
@@ -131,7 +150,7 @@ export const content = {
       role: "Software Engineer",
       period: "May 2025 — Aug 2026",
       detail:
-        "Built Rivo and Rivo Business APIs for onboarding, KYB, wallets, transfers, payment links and refunds. I also worked on business permissions, recent recipients, payment-link settlement and webhook delivery states. Reported backend-related issues fell by 40% during my tenure.",
+        "Built Rivo and Rivo Business APIs for fiat and crypto wallets, deposits, swaps, transfers, payment links, refunds and KYB onboarding. I also shipped business team permissions and transaction controls, and resolved settlement, webhook and duplicate-notification edge cases. The team reported 40% fewer backend-related issues during my tenure.",
       href: "https://www.userivo.co/",
     },
     {

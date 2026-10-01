@@ -23,7 +23,7 @@ export default function MotionController() {
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const targets = document.querySelectorAll<HTMLElement>(
-      ".section-head, .experience-item, .contact h2",
+      ".section-head, .stack-system, .experience-item, .contact h2",
     );
     const observer = !reducedMotion && "IntersectionObserver" in window
       ? new IntersectionObserver((entries, activeObserver) => {

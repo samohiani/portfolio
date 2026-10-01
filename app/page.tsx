@@ -9,6 +9,7 @@ function IntroLoader() {
       <div className="intro-loader__panel intro-loader__panel--left" />
       <div className="intro-loader__panel intro-loader__panel--right" />
       <span className="intro-loader__haze" />
+      <span className="intro-loader__interference" />
       <span className="intro-loader__horizon" />
       <span className="intro-loader__rift" />
       <div className="intro-loader__identity">
@@ -41,6 +42,10 @@ export default function Home() {
         <div className="hero-portal" aria-hidden="true">
           <span className="hero-portal__halo" />
           <span className="hero-portal__rift" />
+          <svg className="hero-portal__cracks" viewBox="0 0 230 700" preserveAspectRatio="none" focusable="false" aria-hidden="true">
+            <path d="M112 8 99 105 119 174 107 263 128 356 105 447 121 547 108 692" />
+            <path d="M100 105 54 142 25 202 M119 174 164 206 199 274 M107 263 69 302 45 370 M128 356 169 391 193 453 M105 447 56 484 26 557 M121 547 160 590 177 661" />
+          </svg>
           <span className="hero-portal__embers" />
         </div>
         <div className="hero-grid">
@@ -64,7 +69,29 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="signal-divider" aria-hidden="true"><span /></div>
+
       <WorkShowcase />
+
+      <section className="stack" id="stack" aria-labelledby="stack-title">
+        <div className="section-head stack-head">
+          <h2 id="stack-title">{content.sections.stack}</h2>
+          <p>{content.presentation.stackIntro}</p>
+        </div>
+        <div className="stack-system">
+          {content.stack.map((layer) => (
+            <div className="stack-layer" key={layer.label}>
+              <div className="stack-layer__identity">
+                <h3>{layer.label}</h3>
+                <p>{layer.context}</p>
+              </div>
+              <ul className="stack-layer__tools" aria-label={`${layer.label} technologies`}>
+                {layer.tools.map((tool) => <li key={tool}>{tool}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="experience" id="experience" aria-labelledby="experience-title">
         <div className="section-head experience-head">
