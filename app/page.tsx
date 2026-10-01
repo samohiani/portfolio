@@ -113,7 +113,6 @@ export default function Home() {
         <section className="about" id="about" aria-labelledby="about-title">
           <div className="section-head"><h2 id="about-title">{content.sections.about}</h2></div>
           <p>{content.about}</p>
-          <span>{content.presentation.aboutFocus}</span>
         </section>
         <section className="earlier" aria-labelledby="earlier-title">
           <div className="section-head"><h2 id="earlier-title">{content.sections.earlier}</h2></div>

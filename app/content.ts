@@ -34,7 +34,6 @@ export const content = {
     contributionLabel: "My contribution",
     resultLabel: "What changed",
     experienceRange: "Since 2024",
-    aboutFocus: "Backend engineering / Full-stack products / Payments",
     backToTop: "Back to top",
   },
   projects: [
@@ -191,7 +190,7 @@ export const content = {
     },
   ],
   about:
-    "I’m Samuel, a software engineer in Lagos. I work across the parts of a product people see and the systems that make it dependable. Payments taught me to care about clear states, edge cases and what happens when things fail.",
+    "I work across the whole product. I’ve built interfaces, APIs and integrations, and I care about how they come together once people start using them.",
   contact: {
     prompt: "Have a role or product in mind?",
     headline: "Let’s talk about what you’re building.",
