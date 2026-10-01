@@ -58,10 +58,17 @@ export default function ContactDialog({ email, links }: { email: string; links: 
         <a className="contact-dialog__address" href={`mailto:${email}`}>{email}</a>
         <div className="contact-dialog__actions">
           <button type="button" className="contact-dialog__copy" onClick={copyEmail}>
-            {copyState === "copied" ? "Email copied" : "Copy email"}
-            <span aria-hidden="true">{copyState === "copied" ? "✓" : "↗"}</span>
+            Copy email
+            <span className="contact-dialog__copy-icon" aria-hidden="true">
+              {copyState === "copied" ? "✓" : (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="8" y="7" width="12" height="14" rx="1" />
+                  <path d="M16 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3" />
+                </svg>
+              )}
+            </span>
           </button>
-          <a href={`mailto:${email}`} className="contact-dialog__open">Open email app</a>
+          <a href={`mailto:${email}`} className="contact-dialog__open">Open mail</a>
         </div>
         <p className="contact-dialog__status" role="status" aria-live="polite">
           {copyState === "copied" ? "Address copied to your clipboard." : copyState === "failed" ? "Copy unavailable here. Select the address above to copy it." : ""}
