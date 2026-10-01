@@ -12,7 +12,7 @@ export const content = {
     headline: ["I make the complicated", "parts work."],
     description:
       "I’m Samuel Ohiani, a software engineer. I build web products, backend APIs and practical automations. I like turning messy flows into something people can understand and use.",
-    workLink: "View selected work",
+    workLink: "Explore my work",
     contactLink: "Email me",
   },
   sections: {

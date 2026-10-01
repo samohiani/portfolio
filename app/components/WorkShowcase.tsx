@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { content } from "../content";
+import "./work-preview.css";
 
 const CYCLE_MS = 6500;
 
@@ -27,11 +28,12 @@ function getPageVisible() {
 
 export default function WorkShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [inView, setInView] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [focusWithin, setFocusWithin] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const previewRef = useRef<HTMLDialogElement>(null);
   const reducedMotion = useSyncExternalStore(subscribeMotion, getReducedMotion, () => false);
   const pageVisible = useSyncExternalStore(subscribeVisibility, getPageVisible, () => true);
   const isRunning = isPlaying && inView && pageVisible && !reducedMotion && !isHovered && !focusWithin;
@@ -62,6 +64,40 @@ export default function WorkShowcase() {
 
   return (
     <section ref={sectionRef} className="work" id="work" aria-labelledby="work-title">
+      <dialog ref={previewRef} className="work-preview" aria-labelledby="work-preview-title">
+        <div className="work-preview__header">
+          <div>
+            <p>Selected work</p>
+            <h2 id="work-preview-title">A closer look.</h2>
+          </div>
+          <button type="button" className="work-preview__close" onClick={() => previewRef.current?.close()} aria-label="Close project preview">×</button>
+        </div>
+        <div className="work-preview__choices" role="group" aria-label="Choose a project to preview">
+          {content.projects.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              className={index === activeIndex ? "work-preview__choice is-active" : "work-preview__choice"}
+              aria-pressed={index === activeIndex}
+              onClick={() => chooseProject(index)}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+        <div className="work-preview__body" key={project.id}>
+          <div className="work-preview__image">
+            <Image src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} sizes="(max-width: 700px) 90vw, 48vw" />
+          </div>
+          <div className="work-preview__story">
+            <span>{String(activeIndex + 1).padStart(2, "0")} / {String(content.projects.length).padStart(2, "0")}</span>
+            <h3>{project.name}</h3>
+            <p className="work-preview__headline">{project.headline}</p>
+            <p className="work-preview__summary">{project.summary}</p>
+            <a href="#work" onClick={() => previewRef.current?.close()}>Read the full project story <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </dialog>
       <div className="section-head work-head">
         <div>
           <h2 id="work-title">{content.sections.work}</h2>
@@ -69,6 +105,10 @@ export default function WorkShowcase() {
         </div>
         <div className="work-controls">
           <span className="work-count">{String(activeIndex + 1).padStart(2, "0")} / {String(content.projects.length).padStart(2, "0")}</span>
+          <button className="work-preview-trigger" type="button" onClick={() => {
+            setIsPlaying(false);
+            previewRef.current?.showModal();
+          }}>Quick preview</button>
           {!reducedMotion && (
             <button
               className="work-autoplay"

@@ -183,6 +183,8 @@ html[data-theme="light"] .signal-divider::after { opacity: .12; animation: none;
 .work-head { padding-bottom: 37px; }
 .work-controls { display: flex; align-items: center; gap: 22px; }
 .work-count { color: var(--limestone) !important; font-family: var(--font-display), sans-serif; font-size: 1rem !important; letter-spacing: -.05em; }
+.work-preview-trigger { border: 0; border-bottom: 1px solid var(--oxblood); padding: 0 0 4px; background: transparent; color: var(--limestone); font-size: .72rem; font-weight: 700; white-space: nowrap; cursor: pointer; transition: color .2s ease; }
+.work-preview-trigger:hover { color: var(--oxblood); }
 .work-autoplay { display: inline-flex; align-items: center; gap: 7px; border: 0; border-bottom: 1px solid var(--line); padding: 0 0 4px; background: transparent; color: var(--mist); font-size: .7rem; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
 .work-autoplay:hover { color: var(--oxblood); border-color: var(--oxblood); }
 .work-autoplay span { min-width: 12px; color: var(--oxblood); font-size: .82rem; line-height: 1; }
@@ -402,7 +404,7 @@ body:has(.contact-dialog[open]) { overflow: hidden; }
   .section-head p { display: none; }
   .work { padding-top: 0; }
   .work-head { flex-direction: column; align-items: stretch; gap: 13px; padding-bottom: 21px; }
-  .work-controls { justify-content: space-between; }
+  .work-controls { justify-content: space-between; flex-wrap: wrap; gap: 12px 18px; }
   .work-count { white-space: nowrap; }
   .work-feature { grid-template-columns: 1fr; }
   .work-story h3 { font-size: 3.8rem; }
@@ -599,7 +601,7 @@ html[data-intro="skip"] .intro-loader { display: none; }
   .stack-layer__tools { width: 100%; flex-wrap: wrap; }
   .stack-tool { white-space: normal; }
   .work-visual__interference { opacity: 0; }
-  .theme-toggle__symbol, .main-link, .main-link span, .work-autoplay,
+  .theme-toggle__symbol, .main-link, .main-link span, .work-autoplay, .work-preview-trigger,
   .work-visual::before, .stack-layer::before, .stack-layer__identity h3, .experience-item::before, .experience-role h3 { transition: none; }
   .site-header, .site-header::before, .site-header::after, .site-header nav a::after { transition: none; }
   .contact-dialog[open] { animation: none; }
