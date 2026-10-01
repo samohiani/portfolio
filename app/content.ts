@@ -9,9 +9,9 @@ export const content = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    headline: ["I build what", "happens next."],
+    headline: ["I make the complicated", "parts work."],
     description:
-      "I’m Samuel Ohiani, a software engineer building products, APIs and practical automations. My work has made payment states clearer, lead rankings explainable and gallery updates possible without a code release.",
+      "I’m Samuel Ohiani, a software engineer. I build web products, backend APIs and practical automations. I like turning messy flows into something people can understand and use.",
     workLink: "View selected work",
     contactLink: "Email me",
   },
