@@ -46,12 +46,10 @@ export default function Home() {
       <IntroLoader />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Samuel Ohiani, back to top">{content.name}<span> / {content.role}</span></a>
-        <div className="header-actions">
-          <nav aria-label="Primary navigation">
-            {content.navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}
-          </nav>
-          <ThemeToggle />
-        </div>
+        <nav aria-label="Primary navigation">
+          {content.navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}
+        </nav>
+        <ThemeToggle />
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -95,21 +93,21 @@ export default function Home() {
             <h2 id="stack-title">{content.sections.stack}</h2>
             <p>{content.presentation.stackIntro}</p>
           </div>
-          <span className="stack-mobile-hint">Swipe through tools</span>
           <label className="stack-motion-control">
-            <input type="checkbox" aria-label="Pause stack animation" />
-            <span className="stack-motion-control__pause" aria-hidden="true">Ⅱ Pause motion</span>
-            <span className="stack-motion-control__resume" aria-hidden="true">▶ Resume motion</span>
+            <input type="checkbox" aria-label="Pause or resume stack animation" />
+            <span className="stack-motion-control__pause" aria-hidden="true">Ⅱ Pause</span>
+            <span className="stack-motion-control__resume" aria-hidden="true">▶ Play</span>
           </label>
         </div>
-        <div className="stack-system">
+        <div className="stack-system" aria-label="Tools I use, grouped by area">
+          <div className="stack-system__top" aria-hidden="true"><span>In rotation</span><span className="stack-system__pulse" /></div>
           {content.stack.map((layer) => (
             <div className="stack-layer" key={layer.label}>
               <div className="stack-layer__identity">
                 <h3>{layer.label}</h3>
                 <p>{layer.context}</p>
               </div>
-              <div className="stack-layer__viewport" tabIndex={0} role="region" aria-label={`${layer.label} technologies. Focus to pause, then scroll to explore.`}>
+              <div className="stack-layer__viewport">
                 <div className="stack-layer__track">
                   <ul className="stack-layer__tools">
                     {layer.tools.map((tool) => <StackTool key={tool} tool={tool} />)}
@@ -163,7 +161,11 @@ export default function Home() {
         <div className="contact-links">{content.contact.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div>
       </section>
 
-      <footer className="site-footer"><span>© 2026 {content.name}</span><a href="#top">{content.presentation.backToTop} ↑</a></footer>
+      <footer className="site-footer">
+        <a className="footer-signature" href="#top" aria-label="Sammy, back to top">Sammy<span aria-hidden="true">.</span></a>
+        <span className="footer-credit">Samuel Ohiani<br />© 2026</span>
+        <a className="footer-top" href="#top">{content.presentation.backToTop}<span aria-hidden="true">↑</span></a>
+      </footer>
     </main>
   );
 }
