@@ -1,25 +1,16 @@
 # Samuel Ohiani Portfolio
 
-Personal portfolio for Samuel Ohiani, a software engineer focused on backend systems, payment infrastructure, and full-stack products.
+Personal portfolio for Samuel Ohiani, a software engineer focused on backend systems, payment infrastructure and web products.
 
 ## Built with
 
-- Next.js
-- TypeScript
-- React
-- CSS
+Next.js, TypeScript, React and CSS.
 
-## Includes
+## About the site
 
-- Responsive editorial layout with four selectable projects
-- Full, uncropped project previews and repository-backed work descriptions
-- Complete experience and earlier-project archive
-- Portrait-free design and a brief cinematic introduction
-- A black and red default theme with a saved light-theme preference
-- A staged hero reveal, reading-progress line, section traces, and project image transitions
-- Automatic project previews that pause while reading and stop after manual selection
-- Reduced-motion support; the introduction plays once per browser session
-- Replay the introduction locally at `http://localhost:3000/?intro=1`
+The site presents four selected projects, my experience, technical stack and earlier work. Project previews show the full image and pause when a visitor starts reading or chooses a project.
+
+The black and red theme has a light option. Motion is reduced for visitors who request it, and the introduction plays once per browser session. To replay it locally, visit [the intro preview](http://localhost:3000/?intro=1).
 
 ## Run locally
 

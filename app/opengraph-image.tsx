@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Samuel Ohiani — Software Engineer";
+export const alt = "Samuel Ohiani, Software Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 25, color: "#b8babd" }}>
-        <span>Full-stack products · backend systems · automations</span>
+        <span>Web products · backend systems · automations</span>
         <span>Lagos, Nigeria</span>
       </div>
     </div>,
