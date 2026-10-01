@@ -11,7 +11,7 @@ export const content = {
   hero: {
     headline: ["I build software", "for complex ideas."],
     description:
-      "I’m Samuel Ohiani, a software engineer in Lagos. I build web products, backend systems and practical automations. I care about the interfaces people use and the systems that keep them working.",
+      "I’m Samuel Ohiani, a software engineer in Lagos. I build full-stack products, backend systems and practical automations. I care about the interfaces people use and the systems that keep them working.",
     workLink: "View selected work",
     contactLink: "Email me",
   },
@@ -34,7 +34,7 @@ export const content = {
     contributionLabel: "My contribution",
     resultLabel: "What changed",
     experienceRange: "Since 2024",
-    aboutFocus: "Backend engineering / Web products / Payments",
+    aboutFocus: "Backend engineering / Full-stack products / Payments",
     backToTop: "Back to top",
   },
   projects: [
@@ -46,7 +46,7 @@ export const content = {
       summary:
         "At Resilience 17, I build payment flows for PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay; I also added Google Pay and chargeback paths for Worldpay.",
       decision:
-        "My work spans seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I also clarified how provider errors reach clients, added repeatable sandbox scenarios and surfaced the next required action on payment intents.",
+        "My work spans seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I also separated provider-specific error parsing from the shared API error contract, added repeatable sandbox scenarios and surfaced the latest required action on payment intents.",
       result:
         "More payment journeys run through a consistent API: clients can act on the latest payment step, interpret provider failures, and exercise flows in the sandbox.",
       image: "/images/work/nuvion-product-preview.png",
@@ -58,26 +58,26 @@ export const content = {
     {
       id: "rivo",
       name: "Rivo",
-      category: "Payments and wallets at Low Gravity",
+      category: "Multi-currency finance at Low Gravity",
       headline: "Keeping business transactions in sync.",
       summary:
         "At Low Gravity, I built across Rivo and Rivo Business APIs: fiat and crypto wallets, deposits, swaps and transfers, business onboarding and KYB, payment links, team permissions and refunds.",
       decision:
-        "I fixed edge cases in payment link settlement and currency handling, made webhook delivery states consistent, and improved transaction and balance handling across user and business flows.",
+        "I fixed edge cases in payment-link settlement and currency handling, made webhook delivery states consistent, and improved transaction and balance handling across user and business flows.",
       result:
-        "The team reported 40% fewer backend issues during my time there.",
+        "The team reported 40% fewer backend-related issues during my time there.",
       image: "/images/work/rivo-product-preview.png",
       imageWidth: 1920,
       imageHeight: 1440,
       imageAlt: "Public Rivo Business product preview showing a transaction list",
       context:
-        "Estimated lifetime activity across the platform: about $106k in crypto deposits and $53k swapped. These totals describe the product as a whole.",
+        "Estimated all-time activity across the platform: about $106k in crypto deposits and $53k swapped. These totals describe the product as a whole.",
       link: { label: "Visit Rivo", href: "https://www.userivo.co/" },
     },
     {
       id: "qualiflow",
       name: "Qualiflow",
-      category: "Independent product",
+      category: "Independent full-stack project",
       headline: "From raw CSV to explainable lead ranking.",
       summary:
         "I built a lead qualification workspace that cleans CSV imports, scores prospects against adjustable criteria and explains each ranking before export.",
@@ -148,7 +148,7 @@ export const content = {
       role: "Software Engineer",
       period: "Dec 2025 to present",
       detail:
-        "Building payment flows across PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay, and extending Worldpay support for Google Pay and chargebacks. My work covers seller onboarding, payment initiation, 3DS, captures, refunds, signed webhooks and clear error responses from each provider. I also added sandbox test scenarios and made the latest required payment action available to API clients.",
+        "Building payment flows across PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay, and extending Worldpay support for Google Pay and chargebacks. My work covers seller onboarding, payment initiation, 3DS, captures, refunds, signed webhooks and provider-specific error responses. I also added sandbox test scenarios and made the latest required payment action available to API clients.",
       href: "https://www.resilience17.com/",
     },
     {
@@ -156,7 +156,7 @@ export const content = {
       role: "Software Engineer",
       period: "May 2025 to Sep 2026",
       detail:
-        "Built Rivo and Rivo Business APIs for fiat and crypto wallets, deposits, swaps, transfers, payment links, refunds and KYB onboarding. I also shipped business team permissions and transaction controls, and resolved settlement issues, webhook errors and duplicate deposit notifications. The team reported 40% fewer backend issues during my tenure.",
+        "Built Rivo and Rivo Business APIs for fiat and crypto wallets, deposits, swaps, transfers, payment links, refunds and KYB onboarding. I also shipped business team permissions and transaction controls, and resolved settlement issues, webhook errors and duplicate deposit notifications. The team reported 40% fewer backend-related issues during my tenure.",
       href: "https://www.userivo.co/",
     },
     {

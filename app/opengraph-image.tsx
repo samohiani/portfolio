@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 25, color: "#b8babd" }}>
-        <span>Web products · backend systems · automations</span>
+        <span>Full-stack products · backend systems · automations</span>
         <span>Lagos, Nigeria</span>
       </div>
     </div>,

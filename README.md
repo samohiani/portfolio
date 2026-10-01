@@ -1,6 +1,6 @@
 # Samuel Ohiani Portfolio
 
-Personal portfolio for Samuel Ohiani, a software engineer focused on backend systems, payment infrastructure and web products.
+Personal portfolio for Samuel Ohiani, a software engineer focused on backend systems, payment infrastructure and full-stack products.
 
 ## Built with
 
