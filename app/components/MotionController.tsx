@@ -7,11 +7,28 @@ export default function MotionController() {
 
   useEffect(() => {
     let frame = 0;
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const navigation = Array.from(document.querySelectorAll<HTMLAnchorElement>(".site-header nav a[href^='#']"));
+    const sections = navigation.map((link) => ({
+      link,
+      section: document.getElementById(link.hash.slice(1)),
+    }));
     const updateProgress = () => {
       frame = 0;
       const maximum = document.documentElement.scrollHeight - window.innerHeight;
       const fraction = maximum > 0 ? Math.min(1, Math.max(0, window.scrollY / maximum)) : 0;
       if (progressRef.current) progressRef.current.style.transform = `scaleX(${fraction})`;
+
+      header?.classList.toggle("is-scrolled", window.scrollY > 52);
+      const landmark = Math.min(220, window.innerHeight * 0.36);
+      let current: HTMLAnchorElement | null = null;
+      for (const { link, section } of sections) {
+        if (section && section.getBoundingClientRect().top <= landmark) current = link;
+      }
+      for (const { link } of sections) {
+        if (link === current) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      }
     };
     const requestUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(updateProgress);
@@ -40,6 +57,7 @@ export default function MotionController() {
       window.removeEventListener("scroll", requestUpdate);
       window.removeEventListener("resize", requestUpdate);
       if (frame) window.cancelAnimationFrame(frame);
+      header?.classList.remove("is-scrolled");
       observer?.disconnect();
     };
   }, []);
