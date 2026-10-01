@@ -193,7 +193,7 @@ export const content = {
   contact: {
     prompt: "Hiring or building something?",
     headline: "Let’s start with the problem.",
-    action: "Email Samuel",
+    action: "Email me",
     email: "ohianisammy2005@gmail.com",
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-ohiani/" },
