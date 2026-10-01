@@ -9,9 +9,9 @@ export const content = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    headline: ["I make the complicated", "parts work."],
+    headline: ["I build what", "happens next."],
     description:
-      "I’m Samuel Ohiani, a software engineer. I build web products, backend APIs and practical automations. I like turning messy flows into something people can understand and use.",
+      "I’m Samuel Ohiani, a software engineer building products, APIs and practical automations. My work has made payment states clearer, lead rankings explainable and gallery updates possible without a code release.",
     workLink: "View selected work",
     contactLink: "Email me",
   },
@@ -43,11 +43,11 @@ export const content = {
       category: "Payment infrastructure at Resilience 17",
       headline: "One payment flow, several providers.",
       summary:
-        "I integrated PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay into Nuvion’s acquiring API, and extended Worldpay support with Google Pay and chargeback paths.",
+        "For Nuvion, I integrated PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay, then extended Worldpay with Google Pay and chargeback flows.",
       decision:
-        "I worked on seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I separated provider-specific error parsing from the shared API contract, added repeatable sandbox scenarios and surfaced the latest required action on payment intents.",
+        "I worked on onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I made provider errors consistent, added sandbox scenarios and exposed the next required action on payment intents.",
       result:
-        "Clients can see the action a payment needs next, handle provider failures consistently and test flows in the sandbox.",
+        "API clients can see what a payment needs next and handle failures consistently across providers.",
       image: "/images/work/nuvion-product-preview.png",
       imageWidth: 1552,
       imageHeight: 792,
@@ -60,9 +60,9 @@ export const content = {
       category: "Multi-currency finance at Low Gravity",
       headline: "Keeping business transactions in sync.",
       summary:
-        "I built API features for Rivo and Rivo Business, covering fiat and crypto wallets, deposits, swaps, transfers, KYB, payment links, team permissions and refunds.",
+        "I built API features for fiat and crypto wallets across Rivo and Rivo Business, including deposits, swaps, transfers, KYB onboarding and payment links.",
       decision:
-        "I fixed edge cases in payment-link settlement and currency handling, made webhook delivery states consistent, and improved transaction and balance handling across user and business flows.",
+        "I added team permissions and refunds, and fixed settlement, currency, webhook and balance handling issues.",
       result:
         "The team reported 40% fewer backend-related issues during my time there.",
       image: "/images/work/rivo-product-preview.png",
@@ -79,11 +79,11 @@ export const content = {
       category: "Independent full-stack project",
       headline: "From raw CSV to explainable lead ranking.",
       summary:
-        "I built a lead qualification workspace that cleans CSV imports, scores prospects against adjustable criteria and explains each ranking before export.",
+        "I built a CSV lead scoring tool with adjustable criteria and an explanation for each ranking.",
       decision:
-        "Imports are processed in memory instead of storing prospect files, and exported cells are escaped to prevent spreadsheet formulas from running when the CSV is opened.",
+        "Imports stay in memory; exported cells are escaped so spreadsheet formulas cannot run when the file is opened.",
       result:
-        "The live app takes users from a raw file to a reviewable, adjustable ranked list they can export.",
+        "The live app lets users review and adjust the ranked list before exporting it.",
       image: "/images/work/qualiflow-desktop.webp",
       imageWidth: 1440,
       imageHeight: 1000,
