@@ -3,6 +3,7 @@ export const content = {
   role: "Software engineer",
   navigation: [
     { label: "Work", href: "#work" },
+    { label: "Stack", href: "#stack" },
     { label: "Experience", href: "#experience" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
@@ -27,7 +28,7 @@ export const content = {
     currentStatement: "Payment APIs across cards and digital wallets.",
     currentDetail: "Provider integrations, 3DS, refunds and reliable payment states.",
     workIntro: "What I shipped, across APIs and interfaces.",
-    stackIntro: "The tools I use to build products end to end.",
+    stackIntro: "Selected tools across product, APIs and delivery.",
     chooseProject: "Choose a project",
     previewLabel: "Public product preview",
     contributionLabel: "My contribution",
@@ -122,18 +123,23 @@ export const content = {
   stack: [
     {
       label: "Interface",
-      context: "Web experiences",
-      tools: ["React", "Next.js", "TypeScript", "CSS"],
+      context: "Web & content",
+      tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Sanity", "CSS"],
     },
     {
       label: "Backend",
       context: "APIs & integrations",
-      tools: ["Node.js", "Express", "JavaScript", ".NET"],
+      tools: ["Node.js", "Express", "NestJS", "JavaScript", "Python", ".NET"],
     },
     {
       label: "Data",
-      context: "Storage & caching",
-      tools: ["MongoDB", "MySQL", "PostgreSQL", "Redis"],
+      context: "Storage & access",
+      tools: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Mongoose", "Knex"],
+    },
+    {
+      label: "Delivery",
+      context: "Testing & shipping",
+      tools: ["Git", "Jest", "Postman", "Swagger", "Heroku", "Vercel"],
     },
   ],
   experience: [
@@ -148,7 +154,7 @@ export const content = {
     {
       company: "Rivo",
       role: "Software Engineer",
-      period: "May 2025 — Aug 2026",
+      period: "May 2025 — Sep 2026",
       detail:
         "Built Rivo and Rivo Business APIs for fiat and crypto wallets, deposits, swaps, transfers, payment links, refunds and KYB onboarding. I also shipped business team permissions and transaction controls, and resolved settlement, webhook and duplicate-notification edge cases. The team reported 40% fewer backend-related issues during my tenure.",
       href: "https://www.userivo.co/",
