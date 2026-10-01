@@ -13,7 +13,8 @@ export const content = {
     description:
       "I’m Samuel Ohiani, a software engineer. I build web products, backend APIs and practical automations. I like turning messy flows into something people can understand and use.",
     workLink: "Explore my work",
-    contactLink: "Email me",
+    resumeLink: "Download résumé",
+    resumeHref: "/Samuel-Ohiani-Resume.pdf",
   },
   sections: {
     work: "Selected work",

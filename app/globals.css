@@ -140,8 +140,9 @@ html[data-theme="light"] .hero-main h1 span:last-child { text-shadow: none; anim
 .main-link:hover { color: var(--oxblood); box-shadow: 0 7px 14px -10px var(--oxblood); }
 .main-link span { font-size: 1.1rem; transition: transform .25s ease; }
 .main-link:hover span { transform: translateY(5px); }
-.quiet-link { color: var(--mist); font-size: .82rem; transition: color .2s ease; }
-.quiet-link:hover { color: var(--oxblood); }
+.hero-resume-link { display: inline-flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 8px; color: var(--limestone); font-size: .82rem; transition: color .2s ease, border-color .2s ease; }
+.hero-resume-link:hover { border-color: var(--oxblood); color: var(--limestone); }
+.hero-resume-link span { color: var(--oxblood); font-size: 1rem; line-height: 1; }
 .hero-aside {
   position: absolute;
   right: 0;

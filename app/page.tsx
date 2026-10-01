@@ -71,7 +71,7 @@ export default function Home() {
               <p>{content.hero.description}</p>
               <div className="hero-actions">
                 <a href="#work" className="main-link">{content.hero.workLink}<span aria-hidden="true">↓</span></a>
-                <a href={`mailto:${content.contact.email}`} className="quiet-link">{content.hero.contactLink}</a>
+                <a href={content.hero.resumeHref} className="hero-resume-link" download="Samuel-Ohiani.pdf">{content.hero.resumeLink}<span aria-hidden="true">↓</span></a>
               </div>
             </div>
           </div>
