@@ -1,4 +1,5 @@
 import WorkShowcase from "./components/WorkShowcase";
+import ContactDialog from "./components/ContactDialog";
 import ThemeToggle from "./components/ThemeToggle";
 import MotionController from "./components/MotionController";
 import { content } from "./content";
@@ -44,6 +45,7 @@ export default function Home() {
     <main id="top" className="page-shell">
       <MotionController />
       <IntroLoader />
+      <ContactDialog email={content.contact.email} links={content.contact.links} />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Samuel Ohiani, back to top">{content.name}<span> / {content.role}</span></a>
         <nav aria-label="Primary navigation">
