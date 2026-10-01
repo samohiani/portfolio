@@ -128,12 +128,12 @@ export const content = {
     {
       label: "Backend",
       context: "APIs & integrations",
-      tools: ["Node.js", "Express", "NestJS", "JavaScript", "Python", ".NET"],
+      tools: ["Node.js", "Express", "NestJS", "JavaScript", "Python", ".NET", "Claude", "OpenAI", "Resend"],
     },
     {
       label: "Data",
       context: "Storage & access",
-      tools: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Mongoose", "Knex"],
+      tools: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Mongoose", "Knex", "Supabase"],
     },
     {
       label: "Delivery",

@@ -2,6 +2,22 @@ import WorkShowcase from "./components/WorkShowcase";
 import ThemeToggle from "./components/ThemeToggle";
 import MotionController from "./components/MotionController";
 import { content } from "./content";
+import { stackIconPaths } from "./stack-icons";
+
+function StackTool({ tool }: { tool: string }) {
+  const path = stackIconPaths[tool];
+
+  return (
+    <li className="stack-tool">
+      {path && (
+        <svg viewBox="0 0 24 24" fill="currentColor" focusable="false" aria-hidden="true">
+          <path d={path} />
+        </svg>
+      )}
+      <span>{tool}</span>
+    </li>
+  );
+}
 
 function IntroLoader() {
   return (
@@ -75,8 +91,16 @@ export default function Home() {
 
       <section className="stack" id="stack" aria-labelledby="stack-title">
         <div className="section-head stack-head">
-          <h2 id="stack-title">{content.sections.stack}</h2>
-          <p>{content.presentation.stackIntro}</p>
+          <div>
+            <h2 id="stack-title">{content.sections.stack}</h2>
+            <p>{content.presentation.stackIntro}</p>
+          </div>
+          <span className="stack-mobile-hint">Swipe through tools</span>
+          <label className="stack-motion-control">
+            <input type="checkbox" aria-label="Pause stack animation" />
+            <span className="stack-motion-control__pause" aria-hidden="true">Ⅱ Pause motion</span>
+            <span className="stack-motion-control__resume" aria-hidden="true">▶ Resume motion</span>
+          </label>
         </div>
         <div className="stack-system">
           {content.stack.map((layer) => (
@@ -85,9 +109,16 @@ export default function Home() {
                 <h3>{layer.label}</h3>
                 <p>{layer.context}</p>
               </div>
-              <ul className="stack-layer__tools" aria-label={`${layer.label} technologies`}>
-                {layer.tools.map((tool) => <li key={tool}>{tool}</li>)}
-              </ul>
+              <div className="stack-layer__viewport" tabIndex={0} role="region" aria-label={`${layer.label} technologies. Focus to pause, then scroll to explore.`}>
+                <div className="stack-layer__track">
+                  <ul className="stack-layer__tools">
+                    {layer.tools.map((tool) => <StackTool key={tool} tool={tool} />)}
+                  </ul>
+                  <ul className="stack-layer__tools stack-layer__tools--duplicate" aria-hidden="true">
+                    {layer.tools.map((tool) => <StackTool key={tool} tool={tool} />)}
+                  </ul>
+                </div>
+              </div>
             </div>
           ))}
         </div>
