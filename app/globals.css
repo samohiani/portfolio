@@ -223,13 +223,12 @@ html[data-theme="light"] .signal-divider::after { opacity: .12; animation: none;
   clip-path: inset(0 0 0 0);
   animation: visual-wipe .7s cubic-bezier(.2,.7,.2,1) both;
 }
-.work-visual::after { content: ""; position: absolute; top: 0; bottom: 23px; left: 0; width: 2px; background: var(--oxblood); box-shadow: 0 0 17px 3px var(--oxblood); pointer-events: none; animation: project-scan .72s ease-out both; }
+.work-visual::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 2px; background: var(--oxblood); box-shadow: 0 0 17px 3px var(--oxblood); pointer-events: none; animation: project-scan .72s ease-out both; }
 .work-visual img { display: block; width: 100%; height: auto; }
-.work-visual__interference { position: absolute; z-index: 2; inset: 0 0 23px; background: repeating-linear-gradient(0deg, transparent 0 7px, rgb(237 62 78 / 10%) 7px 9px), linear-gradient(90deg, transparent 20%, rgb(240 64 81 / 22%) 50%, transparent 80%); mix-blend-mode: screen; pointer-events: none; animation: feature-interference .9s steps(7, end) both; }
+.work-visual__interference { position: absolute; z-index: 2; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 7px, rgb(237 62 78 / 10%) 7px 9px), linear-gradient(90deg, transparent 20%, rgb(240 64 81 / 22%) 50%, transparent 80%); mix-blend-mode: screen; pointer-events: none; animation: feature-interference .9s steps(7, end) both; }
 @keyframes feature-interference { 0% { opacity: .62; clip-path: inset(0 0 0 0); transform: translateX(-9px); } 35% { opacity: .3; clip-path: inset(15% 0 19% 0); transform: translateX(8px); } 63% { opacity: .45; clip-path: inset(56% 0 29% 0); transform: translateX(-5px); } 100% { opacity: 0; clip-path: inset(0 0 0 0); transform: translateX(0); } }
 .work-visual::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(135deg, rgb(169 23 43 / 12%), transparent 42%); pointer-events: none; opacity: .55; transition: opacity .5s ease; }
 .work-visual:hover::before { opacity: 1; }
-.work-visual__caption { display: block; padding: 9px 0 0; background: var(--night); color: var(--quiet); font-size: .67rem; }
 @keyframes visual-wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 @keyframes project-scan { 0% { left: 0; opacity: 0; } 20% { opacity: .7; } 75% { opacity: .7; } 100% { left: 100%; opacity: 0; } }
 .work-story { display: flex; flex-direction: column; align-items: flex-start; animation: story-enter .45s .15s both; }

@@ -158,7 +158,6 @@ export default function WorkShowcase() {
               sizes="(max-width: 800px) 94vw, 55vw"
             />
             <span className="work-visual__interference" aria-hidden="true" />
-            <span className="work-visual__caption">{content.presentation.previewLabel}</span>
           </div>
           <div className="work-story" key={`${project.id}-story`}>
             <p className="work-category">{project.category}</p>

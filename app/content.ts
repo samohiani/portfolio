@@ -30,7 +30,6 @@ export const content = {
     workIntro: "A closer look at four different builds.",
     stackIntro: "The tools behind the work.",
     chooseProject: "Choose a project",
-    previewLabel: "Public product preview",
     contributionLabel: "My contribution",
     resultLabel: "What changed",
     experienceRange: "Since 2024",
