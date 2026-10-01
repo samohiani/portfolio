@@ -45,7 +45,7 @@ export default function Home() {
     <main id="top" className="page-shell">
       <MotionController />
       <IntroLoader />
-      <ContactDialog email={content.contact.email} links={content.contact.links} />
+      <ContactDialog email={content.contact.email} resumeHref={content.contact.resumeHref} links={content.contact.links} />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Samuel Ohiani, back to top">{content.name}<span> / {content.role}</span></a>
         <nav aria-label="Primary navigation">
@@ -160,7 +160,10 @@ export default function Home() {
         <p>{content.contact.prompt}</p>
         <h2 id="contact-title">{content.contact.headline}</h2>
         <a className="contact-mail" href={`mailto:${content.contact.email}`}>{content.contact.action}</a>
-        <div className="contact-links">{content.contact.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div>
+        <div className="contact-links">
+          <a className="resume-link" href={content.contact.resumeHref} download>Download résumé</a>
+          {content.contact.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}
+        </div>
       </section>
 
       <footer className="site-footer">
