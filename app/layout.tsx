@@ -24,7 +24,7 @@ const cinema = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
-  title: "Samuel Ohiani, Software Engineer",
+  title: "Samuel Ohiani",
   description:
     "Samuel Ohiani is a software engineer building web products, backend APIs and practical automations.",
   keywords: [
