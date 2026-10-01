@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://samuelohiani-portfolio.vercel.app"),
   title: "Samuel Ohiani, Software Engineer",
   description:
-    "Samuel Ohiani is a software engineer in Lagos building full-stack products, backend systems and practical automations.",
+    "Samuel Ohiani is a software engineer building web products, backend APIs and practical automations.",
   keywords: [
     "Samuel Ohiani",
     "Backend Engineer",

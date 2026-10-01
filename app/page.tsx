@@ -128,7 +128,7 @@ export default function Home() {
       <section className="contact" id="contact" aria-labelledby="contact-title">
         <p>{content.contact.prompt}</p>
         <h2 id="contact-title">{content.contact.headline}</h2>
-        <a className="contact-mail" href={`mailto:${content.contact.email}`} aria-label="Start a conversation by email">{content.contact.action}</a>
+        <a className="contact-mail" href={`mailto:${content.contact.email}`}>{content.contact.action}</a>
         <div className="contact-links">{content.contact.links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div>
       </section>
 

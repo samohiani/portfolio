@@ -9,9 +9,9 @@ export const content = {
     { label: "Contact", href: "#contact" },
   ],
   hero: {
-    headline: ["I build software", "for complex ideas."],
+    headline: ["I make the complicated", "parts work."],
     description:
-      "I’m Samuel Ohiani, a software engineer in Lagos. I build full-stack products, backend systems and practical automations. I care about the interfaces people use and the systems that keep them working.",
+      "I’m Samuel Ohiani, a software engineer. I build web products, backend APIs and practical automations. I like turning messy flows into something people can understand and use.",
     workLink: "View selected work",
     contactLink: "Email me",
   },
@@ -23,12 +23,12 @@ export const content = {
     earlier: "Earlier builds",
   },
   presentation: {
-    currentLabel: "Currently building",
+    currentLabel: "Right now",
     currentCompany: "Resilience 17",
-    currentStatement: "Payment APIs across cards and digital wallets.",
-    currentDetail: "Provider integrations, 3DS, refunds and reliable payment states.",
-    workIntro: "A few products I’ve worked on.",
-    stackIntro: "Selected tools across product, APIs and delivery.",
+    currentStatement: "Building Nuvion’s acquiring API.",
+    currentDetail: "The details that decide whether a payment completes, needs action or fails.",
+    workIntro: "A closer look at four different builds.",
+    stackIntro: "The tools behind the work.",
     chooseProject: "Choose a project",
     previewLabel: "Public product preview",
     contributionLabel: "My contribution",
@@ -41,13 +41,13 @@ export const content = {
       id: "nuvion",
       name: "Nuvion",
       category: "Payment infrastructure at Resilience 17",
-      headline: "Clear payment states across providers.",
+      headline: "One payment flow, several providers.",
       summary:
-        "At Resilience 17, I build payment flows for PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay; I also added Google Pay and chargeback paths for Worldpay.",
+        "I integrated PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay into Nuvion’s acquiring API, and extended Worldpay support with Google Pay and chargeback paths.",
       decision:
-        "My work spans seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I also separated provider-specific error parsing from the shared API error contract, added repeatable sandbox scenarios and surfaced the latest required action on payment intents.",
+        "I worked on seller onboarding, card and wallet payments, 3DS, captures, refunds and signed webhooks. I separated provider-specific error parsing from the shared API contract, added repeatable sandbox scenarios and surfaced the latest required action on payment intents.",
       result:
-        "More payment journeys run through a consistent API: clients can act on the latest payment step, interpret provider failures, and exercise flows in the sandbox.",
+        "Clients can see the action a payment needs next, handle provider failures consistently and test flows in the sandbox.",
       image: "/images/work/nuvion-product-preview.png",
       imageWidth: 1552,
       imageHeight: 792,
@@ -60,7 +60,7 @@ export const content = {
       category: "Multi-currency finance at Low Gravity",
       headline: "Keeping business transactions in sync.",
       summary:
-        "At Low Gravity, I built across Rivo and Rivo Business APIs: fiat and crypto wallets, deposits, swaps and transfers, business onboarding and KYB, payment links, team permissions and refunds.",
+        "I built API features for Rivo and Rivo Business, covering fiat and crypto wallets, deposits, swaps, transfers, KYB, payment links, team permissions and refunds.",
       decision:
         "I fixed edge cases in payment-link settlement and currency handling, made webhook delivery states consistent, and improved transaction and balance handling across user and business flows.",
       result:
@@ -101,13 +101,13 @@ export const content = {
       id: "iraid",
       name: "Iraid",
       category: "Frontend and content workflow",
-      headline: "A gallery the team can update without code.",
+      headline: "A site the team can keep current.",
       summary:
-        "I built the frontend for Iraid’s community programmes website and connected its gallery to Sanity so media and captions can be edited outside the codebase.",
+        "I built the frontend for Iraid’s community programmes site and connected its gallery to Sanity.",
       decision:
-        "I separated the public presentation from gallery content editing, giving the team a direct path to publish new images and captions.",
+        "Images and captions are managed as content instead of being hardcoded into the page.",
       result:
-        "The public site and editable gallery are live.",
+        "The public site is live, and gallery updates no longer require a code release.",
       image: "/images/work/iraid-desktop.webp",
       imageWidth: 1269,
       imageHeight: 714,
@@ -147,7 +147,7 @@ export const content = {
       role: "Software Engineer",
       period: "Dec 2025 to present",
       detail:
-        "Building payment flows across PayPal and Venmo, Checkout.com, Rapyd, Fiserv and emerchantpay, and extending Worldpay support for Google Pay and chargebacks. My work covers seller onboarding, payment initiation, 3DS, captures, refunds, signed webhooks and provider-specific error responses. I also added sandbox test scenarios and made the latest required payment action available to API clients.",
+        "I build backend capabilities for Nuvion’s acquiring platform. My work covers seller onboarding and the payment lifecycle, from initiation and 3DS through captures, refunds and signed webhooks. I’ve also made provider failures easier for API clients to handle and added repeatable sandbox scenarios for testing.",
       href: "https://www.resilience17.com/",
     },
     {
@@ -155,7 +155,7 @@ export const content = {
       role: "Software Engineer",
       period: "May 2025 to Sep 2026",
       detail:
-        "Built Rivo and Rivo Business APIs for fiat and crypto wallets, deposits, swaps, transfers, payment links, refunds and KYB onboarding. I also shipped business team permissions and transaction controls, and resolved settlement issues, webhook errors and duplicate deposit notifications. The team reported 40% fewer backend-related issues during my tenure.",
+        "At Low Gravity, I worked across the personal and business sides of Rivo. I built wallet and transaction flows, KYB onboarding, payment links and team permissions. I also traced settlement issues, webhook errors and duplicate deposit notifications through to fixes.",
       href: "https://www.userivo.co/",
     },
     {
@@ -190,11 +190,11 @@ export const content = {
     },
   ],
   about:
-    "I work across the whole product. I’ve built interfaces, APIs and integrations, and I care about how they come together once people start using them.",
+    "I like problems that cross boundaries. A bug may start in a button and end in a service; a feature may look finished until someone needs to recover from an error. I follow those threads and try to leave the next engineer with code they can understand.",
   contact: {
-    prompt: "Have a role or product in mind?",
-    headline: "Let’s talk about what you’re building.",
-    action: "Start a conversation",
+    prompt: "Hiring or building something?",
+    headline: "Let’s start with the problem.",
+    action: "Email Samuel",
     email: "ohianisammy2005@gmail.com",
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-ohiani/" },
