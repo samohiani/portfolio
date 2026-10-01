@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 type ContactLink = { label: string; href: string };
 
-export default function ContactDialog({ email, resumeHref, links }: { email: string; resumeHref: string; links: readonly ContactLink[] }) {
+export default function ContactDialog({ email, links }: { email: string; links: readonly ContactLink[] }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
 
@@ -74,7 +74,6 @@ export default function ContactDialog({ email, resumeHref, links }: { email: str
           {copyState === "copied" ? "Address copied to your clipboard." : copyState === "failed" ? "Copy unavailable here. Select the address above to copy it." : ""}
         </p>
         <div className="contact-dialog__links">
-          <a className="resume-link" href={resumeHref} download>Download résumé</a>
           {links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>)}
         </div>
       </div>

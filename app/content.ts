@@ -195,7 +195,6 @@ export const content = {
     headline: "Let’s start with the problem.",
     action: "Email me",
     email: "ohianisammy2005@gmail.com",
-    resumeHref: "/Samuel-Ohiani-Resume.pdf",
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-ohiani/" },
       { label: "GitHub", href: "https://github.com/samohiani" },
