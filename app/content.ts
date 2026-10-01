@@ -139,7 +139,7 @@ export const content = {
     {
       label: "Delivery",
       context: "Testing & shipping",
-      tools: ["Git", "Jest", "Postman", "Swagger", "Heroku", "Vercel"],
+      tools: ["Git", "Postman", "Swagger", "AWS", "Docker", "Vercel"],
     },
   ],
   experience: [
